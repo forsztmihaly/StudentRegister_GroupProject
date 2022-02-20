@@ -20,9 +20,32 @@ namespace StudentRegister.Controllers
         }
 
         // GET: Students
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string Name, string Gender, string Status, string Course)
         {
-            return View(await _context.Student.ToListAsync());
+            StudentsSearch studentSearch = new StudentsSearch();
+            studentSearch.Students = await _context.Student.ToListAsync();
+
+            var data = _context.Student.Select(x => x);
+
+            if (!string.IsNullOrEmpty(Name))
+            {
+                data = data.Where(x => x.Name.Contains(Name));
+            }
+            if(!string.IsNullOrEmpty(Gender))
+            {
+                data = data.Where(x => x.Gender == Gender);
+            }
+            if(!string.IsNullOrEmpty(Status))
+            {
+                data = data.Where(x => x.Status == Status);
+            }
+            if (!string.IsNullOrEmpty(Course))
+            {
+                data = data.Where(x => x.Course == Course);
+            }
+
+            studentSearch.Students = await data.ToListAsync();
+            return View(studentSearch);
         }
 
         // GET: Students/Details/5
