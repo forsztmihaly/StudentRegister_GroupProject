@@ -1,4 +1,7 @@
 ﻿@model StudentRegister.Models.StudentsSearch
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 
 @{
     ViewData["Title"] = "Index";
@@ -39,58 +42,58 @@
     </div>
 </form>
 
-    <table class="table">
-        <thead>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Students[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Students[0].Dob)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Students[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Students[0].Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Students[0].Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Students[0].Course)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Students)
+        {
             <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Students[0].Name)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Students[0].Dob)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Students[0].Email)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Students[0].Gender)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Students[0].Status)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Students[0].Course)
-                </th>
-                <th></th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Dob)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Course)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
             </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model.Students)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Name)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Dob)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Email)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Gender)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Status)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Course)
-                    </td>
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
+        }
+    </tbody>
+</table>
