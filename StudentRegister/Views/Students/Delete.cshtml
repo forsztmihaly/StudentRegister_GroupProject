@@ -48,10 +48,8 @@
             @Html.DisplayFor(model => model.Course)
         </dd>
     </dl>
-    
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
-    </form>
+</div>
+<div class="row justify-content-between m-0">
+    <button type="submit" value="Delete" class="btn btn-danger mb-3 col-md-5">Delete</button>
+    <button onclick="location.href='@Url.Action("Index", "Students")'" class="btn btn-warning mb-3 col-md-5">Back to list</button>
 </div>

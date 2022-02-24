@@ -12,6 +12,11 @@ a {
   color: #0366d6;
 }
 
+.button-box {
+    text-align: center;
+    margin-top: 20px;
+}
+
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
