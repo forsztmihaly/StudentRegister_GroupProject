@@ -18,7 +18,7 @@ namespace StudentRegister.Models
 
             if (!db.Student.Any())
             {
-                var sorok = File.ReadAllLines(@"C:\Users\Acer\Desktop\C#\StudentRegister\diakok.csv").Skip(1);
+                var sorok = File.ReadAllLines("diakok.csv").Skip(1);
                 foreach (var sor in sorok)
                 {
                     db.Student.Add(new Student(sor));
