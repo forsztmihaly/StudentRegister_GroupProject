@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Forszt\\Documents\\GitHub\\StudentRegister_GroupProject\\StudentRegister\\StudentRegister.csproj": {}
+    "C:\\Users\\Forszt\\Downloads\\StudentRegister_GroupProject-master\\StudentRegister\\StudentRegister.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Forszt\\Documents\\GitHub\\StudentRegister_GroupProject\\StudentRegister\\StudentRegister.csproj": {
+    "C:\\Users\\Forszt\\Downloads\\StudentRegister_GroupProject-master\\StudentRegister\\StudentRegister.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Forszt\\Documents\\GitHub\\StudentRegister_GroupProject\\StudentRegister\\StudentRegister.csproj",
+        "projectUniqueName": "C:\\Users\\Forszt\\Downloads\\StudentRegister_GroupProject-master\\StudentRegister\\StudentRegister.csproj",
         "projectName": "StudentRegister",
-        "projectPath": "C:\\Users\\Forszt\\Documents\\GitHub\\StudentRegister_GroupProject\\StudentRegister\\StudentRegister.csproj",
+        "projectPath": "C:\\Users\\Forszt\\Downloads\\StudentRegister_GroupProject-master\\StudentRegister\\StudentRegister.csproj",
         "packagesPath": "C:\\Users\\Forszt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Forszt\\Documents\\GitHub\\StudentRegister_GroupProject\\StudentRegister\\obj\\",
+        "outputPath": "C:\\Users\\Forszt\\Downloads\\StudentRegister_GroupProject-master\\StudentRegister\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Forszt\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,11 +46,11 @@
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.13, )"
+              "version": "[5.0.12, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[5.0.13, )"
+              "version": "[5.0.12, )"
             },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
